@@ -5,11 +5,14 @@
   "license": "MIT",
   "scripts": {
     "css": "postcss styles/browser.css -d dist",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "node deploy-github.js"
   },
   "dependencies": {
     "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
+    "fs-extra": "^8.1.0",
+    "gh-pages": "^2.0.1",
     "leaflet": "^1.5.1",
     "postcss-cli": "^6.1.2",
     "postcss-import": "^12.0.1",

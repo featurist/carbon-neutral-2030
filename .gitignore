@@ -1,4 +1,5 @@
 dist
 node_modules
+public
 *.sw?
 yarn-error.log
