@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="dist/browser.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+                           integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+                           crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+            integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+            crossorigin=""></script>
+
+   <script type="text/javascript">
+     window.addEventListener('load', function () {
+
+       mymap = L.map('explore').setView([51.742, -2.222], 13);
+       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+         maxZoom: 18,
+         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+         id: 'mapbox.streets'
+       }).addTo(mymap);
+     })
+   </script>
+  </head>
+  <body>
+    <section class="navigation">
+      <div class="navigation-logo">
+        <h1>Stroud Enviroment Projects</h1>
+        <h2>Your projects mapped</h2>
+      </div>
+      <nav class="navigation-menu">
+        <a>About</a>
+        <a>Contact</a>
+      </nav>
+    </section>
+
+    <section class="welcome">
+      <h1 class="welcome-headline">Welcome</h1>
+      <div class="welcome-items">
+        <div class="welcome-introduction">
+          <p>Some kind remarks</p>
+          <div class="welcome-image">
+            <img src="images/intro.jpg">
+          </div>
+        </div>
+        <div class="welcome-actions">
+          <a class="welcome-find" href="#explore">Find a project</a>
+          <a class="welcome-add" href="#add">Add your project</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore">
+      <a name="explore"></a>
+      <h1>Explore</h1>
+      <nav class="explore-navigation">
+        <a>Food</a>
+        <a>Energy</a>
+        <a>Transport</a>
+        <a>Waste</a>
+        <a>Building</a>
+        <a>Knowledge</a>
+        <a>Nature</a>
+        <a>Materials</a>
+      </nav>
+      <div class="explore-map" id="explore">
+      </div>
+    </section>
+    <section class="mission">
+      <div class="mission-image">
+        <img src="images/mission.jpg">
+      </div>
+      <div class="mission-statement">
+        <h1>Mission Statement</h1>
+        <ul>
+          <li>Purpose</li>
+          <li>What you can get out of it</li>
+          <li>Why you should join [Call to action]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sponsors">
+      <h1>Sponsors</h1>
+      <div class="sponsors-logos">
+        <a class="sponsors-logo" href="https://featurist.co.uk" target="_blank"><img src="logos/featurist.svg" /></a>
+        <a class="sponsors-logo" href="https://stroud.gov.uk" target="_blank"><img src="logos/sdc.svg" /></a>
+      </div>
+    </section>
+
+    <section class="add-project">
+      <a name="add"></a>
+    </section>
+  </body>
+</html>

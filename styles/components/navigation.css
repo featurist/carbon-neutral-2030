@@ -1,0 +1,9 @@
+/** @define navigation */
+
+.navigation {
+  display: flex;
+  flex: 1;
+}
+.navigation-logo {
+  flex: 2.5;
+}

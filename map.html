@@ -1,0 +1,119 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+          crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+   <script type="text/javascript">
+     var mymap, mappedInitiatives
+
+     const initiatives = [
+       {location: {name: 'Randwick', latlng: {lat: 51.75623913150767, lng: -2.247263085854894}}, name: 'Hedgerow', summary: 'Growing a native hedgerow to enable carbon sequestration and restore habitats.', status: 'implementation', sector: 'NATURE, CONSERVATION & ENVIRONMENT', theme: 'Habitat Conservation', solution: 'Rewilding'},
+       {location: {name: 'Horsley', latlng: {lat: 51.68054867117703, lng: -2.235606295877617}}, name: 'E-Bike Sharing', summary: 'Reduce dependency on cars by sharing access to e-bikes', status: 'planning', sector: 'TRANSPORT', theme: 'Bikes', solution: 'Electric Bikes'},
+       {location: {name: 'Randwick', latlng: {lat: 51.75773338577671, lng: -2.2469413757470202}}, name: 'Carbon Neutral Village Hall', summary: 'Upgrade fabric of building and implement solar PV and GSHP heating', status: 'completion', sector: 'ENERGY', theme: 'Solar', solution: 'Rooftop Solar + GSHP'},
+       {location: {name: 'Stroud Valleys', latlng: {lat: 51.742928125326486, lng: -2.245856178616164}}, name: 'Golden Valley Line', summary: 'Reopen the closed stations between Stonehouse and Chalford', status: 'planning', sector: 'TRANSPORT', theme: 'Buses, Trams & Light Railway', solution: 'Mass Transit'},
+
+     ]
+     window.addEventListener('load', function () {
+
+       mymap = L.map('mapid').setView([51.742, -2.222], 13);
+
+       /*
+       let lastMarker
+       mymap.on('click', function (point) {
+         if (lastMarker) {
+            lastMarker.remove()
+         }
+         var marker = L.marker(point.latlng)
+         marker.bindPopup(`Name: <input type="text">`)
+         marker.addTo(mymap);
+         lastMarker = marker
+         console.log(point.latlng)
+       })
+       */
+
+       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+         maxZoom: 18,
+         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+         id: 'mapbox.streets'
+       }).addTo(mymap);
+
+       mappedInitiatives= initiatives.map(initiative => {
+         var marker = L.marker(initiative.location.latlng)
+         marker.bindPopup(`<h1>${initiative.name}</h1>
+          <p>${initiative.summary}</p>
+          <p>Status: ${initiative.status}</p>
+          <p>Sector: ${initiative.sector}</p>
+          <p>Theme: ${initiative.theme}</p>
+          <p>Solution: ${initiative.solution}</p>
+           `)
+         marker.addTo(mymap);
+         return {
+           initiative,
+           marker,
+         }
+       })
+     })
+
+     function filter(attribute, value) {
+       mappedInitiatives.forEach(init => init.marker.remove())
+
+       mappedInitiatives.filter(init => {
+        return init.initiative[attribute] === value
+       }).forEach(init => {
+        init.marker.addTo(mymap)
+       })
+     }
+
+     function showAll() {
+       mappedInitiatives.forEach(init => {
+        init.marker.addTo(mymap)
+       })
+     }
+
+     function getCenter() {
+        console.log(mymap.getCenter())
+     }
+   </script>
+   <style>
+      body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .controls {
+        background-color: #eee;
+      }
+
+      .map {
+        height: 75%;
+      }
+   </style>
+  </head>
+  <body>
+    <div class="controls">
+      <p>
+      Sector:
+      <button onclick="filter('sector', 'ENERGY')">Energy</button>
+      <button onclick="filter('sector', 'TRANSPORT')">Transport</button>
+      <button onclick="filter('sector', 'NATURE, CONSERVATION & ENVIRONMENT')">Nature, Conservation & Environment</button>
+      </p>
+      <p>
+      Status:
+      <button onclick="filter('status', 'planning')">Planning</button>
+      <button onclick="filter('status', 'implementation')">Implementation</button>
+      <button onclick="filter('status', 'completion')">Completion</button>
+      </p>
+      <button onclick="showAll()">Show All</button>
+      <!--<button onclick="getCenter()">get center</button>-->
+    </div>
+    <div class="map" id="mapid">
+    </div>
+  </body>
+</html>

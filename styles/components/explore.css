@@ -1,0 +1,18 @@
+
+.explore {
+  background-color: $snow;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.explore-navigation {
+  display: flex;
+}
+.explore-navigation a {
+  flex: 1;
+  text-align: center;
+  padding: 3px;
+}
+.explore-map {
+  height: 450px;
+}

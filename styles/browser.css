@@ -1,0 +1,58 @@
+
+/*@import "normalize.css";*/
+@import "./base/variables";
+@import "./components/explore";
+@import "./components/mission";
+@import "./components/navigation";
+@import "./components/sponsors";
+@import "./components/welcome";
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px) {
+  /*and (-webkit-min-device-pixel-ratio: 2) {*/
+  .navigation {
+    flex-direction: column;
+  }
+  .welcome-items {
+    flex-direction: column;
+  }
+  .explore-navigation {
+    flex-wrap: wrap;
+  }
+  .mission {
+    flex-direction: column-reverse;
+  }
+  .sponsors-logos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponsors-logo {
+    width: 200px;
+  }
+  .explore-map {
+    height: 250px;
+  }
+}
+
+* {
+  /*border: 1px gray dotted;*/
+}
+body {
+  color: #000;
+  font-family: "titillium-web", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+}
+h1 {
+  font-size: 1.5em;
+}
+section {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
