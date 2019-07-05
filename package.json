@@ -6,10 +6,12 @@
   "scripts": {
     "css": "postcss styles/browser.css -d dist",
     "build": "webpack",
+    "prepare-images": "optisize --src=images --width=450",
     "prepare-deploy": "yarn css && node prepare-deploy.js",
     "deploy": "node prepare-deploy.js && node deploy-github.js"
   },
   "dependencies": {
+    "@three11/optisize": "^1.0.0",
     "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
     "fs-extra": "^8.1.0",
