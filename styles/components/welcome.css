@@ -5,7 +5,15 @@
 .welcome-items {
   display: flex;
   flex: 1;
+  flex-direction: column;
 }
+
+@media (--bp-tablet) {
+  .welcome-items {
+    flex-direction: row;
+  }
+}
+
 .welcome-introduction {
   flex: 1;
 }
@@ -16,6 +24,7 @@
   flex: 1;
   min-width: 0;
   margin: 5px;
+  text-align: center;
 }
 .welcome-image img {
   max-width: 100%; 

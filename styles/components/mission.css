@@ -1,8 +1,15 @@
-
 .mission {
   display: flex;
   background-color: $yellow;
+  flex-direction: column-reverse;
 }
+
+@media (--bp-mobile) {
+  .mission {
+    flex-direction: row;
+  }
+}
+
 .mission-image {
   flex: 1;
   min-width: 0;

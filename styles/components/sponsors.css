@@ -5,6 +5,17 @@
 .sponsors-logo {
   flex: 1;
   height: 75px;
-  max-width: 200px;
+  width: 200px;
   margin: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+@media (--bp-mobile) {
+  .sponsors-logos {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .sponsors-logo {
+    max-width: 200px;
+  }
 }

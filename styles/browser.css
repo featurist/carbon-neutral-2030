@@ -8,37 +8,6 @@
 @import "./components/sponsors";
 @import "./components/welcome";
 
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 480px) {
-  /*and (-webkit-min-device-pixel-ratio: 2) {*/
-  .navigation {
-    flex-direction: column;
-  }
-  .welcome-items {
-    flex-direction: column;
-  }
-  .explore-navigation {
-    flex-wrap: wrap;
-  }
-  .mission {
-    flex-direction: column-reverse;
-  }
-  .sponsors-logos {
-    flex-direction: column;
-    align-items: center;
-  }
-  .sponsors-logo {
-    width: 200px;
-  }
-  .explore-map {
-    height: 250px;
-  }
-}
-
-* {
-  /*border: 1px gray dotted;*/
-}
 body {
   color: #000;
   font-family: "titillium-web", sans-serif;

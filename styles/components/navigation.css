@@ -1,9 +1,16 @@
-/** @define navigation */
 
 .navigation {
   display: flex;
   flex: 1;
+  flex-direction: column;
 }
+
+@media (--bp-mobile) {
+  .navigation {
+    flex-direction: row;
+  }
+}
+
 .navigation-logo {
   flex: 2.5;
 }

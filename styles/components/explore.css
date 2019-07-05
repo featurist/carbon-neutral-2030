@@ -1,4 +1,3 @@
-
 .explore {
   background-color: $snow;
   display: flex;
@@ -7,6 +6,7 @@
 }
 .explore-navigation {
   display: flex;
+  flex-wrap: wrap;
 }
 .explore-navigation a {
   flex: 1;
@@ -22,5 +22,13 @@
   margin-right: 0px;
 }
 .explore-map {
-  height: 450px;
+  height: 250px;
+}
+@media (--bp-mobile) {
+  .explore-navigation {
+    flex-wrap: nowrap;
+  }
+  .explore-map {
+    height: 450px;
+  }
 }

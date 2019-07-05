@@ -6,7 +6,8 @@
   "scripts": {
     "css": "postcss styles/browser.css -d dist",
     "build": "webpack",
-    "deploy": "node deploy-github.js"
+    "prepare-deploy": "yarn css && node prepare-deploy.js",
+    "deploy": "node prepare-deploy.js && node deploy-github.js"
   },
   "dependencies": {
     "autoprefixer": "^9.6.0",
@@ -15,8 +16,10 @@
     "gh-pages": "^2.0.1",
     "leaflet": "^1.5.1",
     "postcss-cli": "^6.1.2",
+    "postcss-custom-media": "^7.0.8",
     "postcss-import": "^12.0.1",
     "postcss-simple-vars": "^5.0.2",
+    "serve": "^11.0.2",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
   }
