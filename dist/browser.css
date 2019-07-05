@@ -26,6 +26,7 @@
 .explore-navigation {
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
 }
 .explore-navigation a {
   -webkit-box-flex: 1;
@@ -42,12 +43,30 @@
   margin-right: 0px;
 }
 .explore-map {
-  height: 450px;
+  height: 250px;
+}
+@media (min-width: 504px) {
+  .explore-navigation {
+    flex-wrap: nowrap;
+  }
+  .explore-map {
+    height: 450px;
+  }
 }
 .mission {
   display: -webkit-box;
   display: flex;
   background-color: rgba(231, 185, 77, 1);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+          flex-direction: column-reverse;
+}
+@media (min-width: 504px) {
+  .mission {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
 }
 .mission-image {
   -webkit-box-flex: 1;
@@ -63,12 +82,21 @@
   -webkit-box-flex: 1;
           flex: 1;
 }
-/** @define navigation */
 .navigation {
   display: -webkit-box;
   display: flex;
   -webkit-box-flex: 1;
           flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+@media (min-width: 504px) {
+  .navigation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
 }
 .navigation-logo {
   -webkit-box-flex: 2.5;
@@ -84,8 +112,25 @@
   -webkit-box-flex: 1;
           flex: 1;
   height: 75px;
-  max-width: 200px;
+  width: 200px;
   margin: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+}
+@media (min-width: 504px) {
+  .sponsors-logos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+            align-items: stretch;
+  }
+  .sponsors-logo {
+    max-width: 200px;
+  }
 }
 .welcome {
   background-color: rgba(239, 71, 111, 1);
@@ -96,6 +141,16 @@
   display: flex;
   -webkit-box-flex: 1;
           flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+@media (min-width: 756px) {
+  .welcome-items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
 }
 .welcome-introduction {
   -webkit-box-flex: 1;
@@ -110,6 +165,7 @@
           flex: 1;
   min-width: 0;
   margin: 5px;
+  text-align: center;
 }
 .welcome-image img {
   max-width: 100%; 
@@ -143,45 +199,6 @@
 }
 .welcome-add {
   background-color: rgba(231, 185, 77, 1);
-}
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 480px) {
-  /*and (-webkit-min-device-pixel-ratio: 2) {*/
-  .navigation {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-  }
-  .welcome-items {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-  }
-  .explore-navigation {
-    flex-wrap: wrap;
-  }
-  .mission {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-            flex-direction: column-reverse;
-  }
-  .sponsors-logos {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    -webkit-box-align: center;
-            align-items: center;
-  }
-  .sponsors-logo {
-    width: 200px;
-  }
-  .explore-map {
-    height: 250px;
-  }
-}
-* {
-  /*border: 1px gray dotted;*/
 }
 body {
   color: #000;
