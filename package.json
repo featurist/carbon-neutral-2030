@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "css": "postcss styles/browser.css -d dist"
+    "css": "postcss styles/browser.css -d dist",
+    "build": "webpack"
   },
   "dependencies": {
     "autoprefixer": "^9.6.0",
@@ -12,6 +13,8 @@
     "leaflet": "^1.5.1",
     "postcss-cli": "^6.1.2",
     "postcss-import": "^12.0.1",
-    "postcss-simple-vars": "^5.0.2"
+    "postcss-simple-vars": "^5.0.2",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   }
 }

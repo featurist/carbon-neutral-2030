@@ -1,0 +1,16 @@
+.title-carbon {
+  color: $red;
+}
+
+.title-neutral {
+  color: $green;
+}
+
+.title-2030 {
+  color: $blue;
+}
+
+.title-sub {
+  font-size: 1em;
+  color: $blue;
+}

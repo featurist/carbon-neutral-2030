@@ -1,0 +1,62 @@
+[
+  {
+    "location": {
+      "name": "Randwick",
+      "latlng": {
+        "lat": 51.75623913150767,
+        "lng": -2.247263085854894
+      }
+    },
+    "name": "Hedgerow",
+    "summary": "Growing a native hedgerow to enable carbon sequestration and restore habitats.",
+    "status": "implementation",
+    "sector": "Nature",
+    "theme": "Habitat Conservation",
+    "solution": "Rewilding"
+  },
+  {
+    "location": {
+      "name": "Horsley",
+      "latlng": {
+        "lat": 51.68054867117703,
+        "lng": -2.235606295877617
+      }
+    },
+    "name": "E-Bike Sharing",
+    "summary": "Reduce dependency on cars by sharing access to e-bikes",
+    "status": "planning",
+    "sector": "Transport",
+    "theme": "Bikes",
+    "solution": "Electric Bikes"
+  },
+  {
+    "location": {
+      "name": "Randwick",
+      "latlng": {
+        "lat": 51.75773338577671,
+        "lng": -2.2469413757470202
+      }
+    },
+    "name": "Carbon Neutral Village Hall",
+    "summary": "Upgrade fabric of building and implement solar PV and GSHP heating",
+    "status": "completion",
+    "sector": "Energy",
+    "theme": "Solar",
+    "solution": "Rooftop Solar + GSHP"
+  },
+  {
+    "location": {
+      "name": "Stroud Valleys",
+      "latlng": {
+        "lat": 51.742928125326486,
+        "lng": -2.245856178616164
+      }
+    },
+    "name": "Golden Valley Line",
+    "summary": "Reopen the closed stations between Stonehouse and Chalford",
+    "status": "planning",
+    "sector": "Transport",
+    "theme": "Buses, Trams & Light Railway",
+    "solution": "Mass Transit"
+  }
+]

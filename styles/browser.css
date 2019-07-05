@@ -1,6 +1,7 @@
 
 /*@import "normalize.css";*/
 @import "./base/variables";
+@import "./components/title";
 @import "./components/explore";
 @import "./components/mission";
 @import "./components/navigation";
