@@ -1,4 +1,5 @@
 const initiatives = require('../data/initiatives.json')
+const L = require('leaflet')
 let carbonExplorer, mappedInitiatives
 
 window.addEventListener('load', function () {
