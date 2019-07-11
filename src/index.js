@@ -1,7 +1,7 @@
 const initiatives = require('../data/initiatives.json')
 const L = require('leaflet')
 require('leaflet.markercluster')
-let carbonExplorer, mappedInitiatives
+let carbonExplorer, mappedInitiatives, markers
 
 window.addEventListener('load', function () {
 
@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
     id: 'mapbox.streets'
   }).addTo(carbonExplorer);
 
-  const markers = L.markerClusterGroup()
+  markers = L.markerClusterGroup()
 
   mappedInitiatives = initiatives.map(initiative => {
     var marker = L.marker(initiative.location.latlng)
@@ -36,18 +36,18 @@ window.addEventListener('load', function () {
 
 window.exploreMap = {
   filter: function (attribute, value) {
-    mappedInitiatives.forEach(init => init.marker.remove())
+    mappedInitiatives.forEach(init => markers.removeLayer(init.marker))
 
     mappedInitiatives.filter(init => {
       return init.initiative[attribute] === value
     }).forEach(init => {
-      init.marker.addTo(carbonExplorer)
+      markers.addLayer(init.marker)
     })
   },
 
   showAll: function () {
     mappedInitiatives.forEach(init => {
-      init.marker.addTo(carbonExplorer)
+      markers.addLayer(init.marker)
     })
   },
 
