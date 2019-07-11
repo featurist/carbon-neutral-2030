@@ -1,6 +1,8 @@
 
 /*@import "normalize.css";*/
 @import "../node_modules/leaflet/dist/leaflet.css";
+@import "../node_modules/leaflet.markercluster/dist/MarkerCluster.css";
+@import "../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css";
 @import "./base/variables";
 @import "./base/variables";
 @import "./components/title";

@@ -1,5 +1,6 @@
 const initiatives = require('../data/initiatives.json')
 const L = require('leaflet')
+require('leaflet.markercluster')
 let carbonExplorer, mappedInitiatives
 
 window.addEventListener('load', function () {
@@ -13,6 +14,8 @@ window.addEventListener('load', function () {
     id: 'mapbox.streets'
   }).addTo(carbonExplorer);
 
+  const markers = L.markerClusterGroup()
+
   mappedInitiatives = initiatives.map(initiative => {
     var marker = L.marker(initiative.location.latlng)
     marker.bindPopup(`<h1>${initiative.name}</h1>
@@ -22,12 +25,13 @@ window.addEventListener('load', function () {
           <p>Theme: ${initiative.theme}</p>
           <p>Solution: ${initiative.solution}</p>
            `)
-    marker.addTo(carbonExplorer);
+    markers.addLayer(marker)
     return {
       initiative,
       marker,
     }
   })
+  carbonExplorer.addLayer(markers)
 })
 
 window.exploreMap = {
