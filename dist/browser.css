@@ -739,6 +739,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .AddInitiative-form input {
   -webkit-box-flex: 1;
           flex: 1;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
 }
 @media (min-width: 756px) {
   .AddInitiative-form textarea {
