@@ -717,6 +717,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .add-initiative-location {
   height: 200px;
 }
+@media (min-width: 756px) {
+  .add-initiative-location {
+    height: 350px;
+  }
+}
 .add-initiative-label button {
   font-size: 1.5em;
   padding: 0px;
