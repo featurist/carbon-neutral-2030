@@ -17,23 +17,37 @@ class App {
   }
   render () {
     return <div class="AddInitiative-form">
-      <div class="AddInitiative-pair">
-        <label><span class="AddInitiative-text">Name:</span> <input type="text" binding="this.initiative.name" placeholder="Food for life" /></label>
-        <label><span class="AddInitiative-text">Description:</span> <textarea binding="this.initiative.summary" placeholder="Provides food for those in need in the Pleasentville area"></textarea></label>
+      
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Name:</span>
+        <input class="AddInitiative-input" type="text" binding="this.initiative.name" placeholder="Food for life" />
+      </label>      
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Description:</span>
+        <textarea binding="this.initiative.summary" placeholder="Provides food for those in need in the Pleasentville area"></textarea>
+      </label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Website:</span>
+      <input class="AddInitiative-input" type="text" binding="this.initiative.website" placeholder="https://foodforlife.example" /></label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Contact Name:</span>
+      <input class="AddInitiative-input" type="text" binding="this.initiative.contactName" placeholder="John Foodie" /></label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Email:</span>
+      <input class="AddInitiative-input" type="text" binding="this.initiative.email" placeholder="john@foodforlife.example" /></label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Group:</span>
+      <input class="AddInitiative-input" type="text" binding="this.initiative.group" placeholder="Transition Pleasentville" /></label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Status:</span>
+      <select class="AddInitiative-input" binding="this.initiative.status"><option>Planning</option><option>In Progress</option><option>Complete</option><option>Ongoing</option></select></label>
+      <div class="AddInitiative-formItem">
       </div>
-      <div class="AddInitiative-pair">
-        <label><span class="AddInitiative-text">Website:</span> <input type="text" binding="this.initiative.website" placeholder="https://foodforlife.example" /></label>
-        <label><span class="AddInitiative-text">Contact Name:</span> <input type="text" binding="this.initiative.contactName" placeholder="John Foodie" /></label>
-      </div>
-      <div class="AddInitiative-pair">
-        <label><span class="AddInitiative-text">Email:</span> <input type="text" binding="this.initiative.email" placeholder="john@foodforlife.example" /></label>
-        <label><span class="AddInitiative-text">Group:</span> <input type="text" binding="this.initiative.group" placeholder="Transition Pleasentville" /></label>
-      </div>
-      <div class="AddInitiative-pair">
-        <label><span class="AddInitiative-text">Status:</span> <select binding="this.initiative.status"><option>Planning</option><option>In Progress</option><option>Complete</option><option>Ongoing</option></select></label>
-        <label></label>
-      </div>
-      <h2>Categories</h2>
+
+      
+      <h2 class="AddInitiative-formHeading">Categories</h2>
+      
+      {/* Needs refactor to follow the format above */}
       <div class="AddInitiative-pair">
         <label><span class="AddInitiative-text">Categories:</span>
           {this.renderCategories()}
@@ -42,7 +56,7 @@ class App {
           {this.category}
         </label>
       </div>
-      <h2>Location</h2>
+      <h2 class="AddInitiative-formHeading">Location</h2>
       <div class="AddInitiative-pair">
         <label><span class="AddInitiative-text">Name:</span> <input type="text" binding="this.initiative.location.name" placeholder="Pleasentville Town Centre" /></label>
         <label><span class="AddInitiative-text">Address:</span> <input type="text" binding="this.initiative.location.address" placeholder="23a High St, Pleasentville, PL3 5VL" /></label>

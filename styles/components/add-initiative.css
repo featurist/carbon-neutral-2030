@@ -4,23 +4,38 @@
 
 .AddInitiative-form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
-.AddInitiative-pair {
+.AddInitiative-formItem {
+  flex-grow: 1;
+  flex-basis: 100%;
   display: flex;
-  flex: 1;
   flex-direction: column;
 }
 
-.AddInitiative-form label {
-  display: flex;
-  flex: 1;
-  min-width: 300px;
-  vertical-align: top;
-  flex-direction: column;
-  padding: 2px;
-}
 @media (--bp-tablet) {
+  .AddInitiative-formItem {
+    flex-basis: 50%;
+  }
+}
+
+.AddInitiative-label {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.AddInitiative-input {
+}
+
+.AddInitiative-textarea {
+  min-height: 100px;
+}
+
+.AddInitiative-formHeading {
+  flex-basis: 100%;
+}
+
+/* @media (--bp-tablet) {
   .AddInitiative-pair {
     flex-direction: row;
   }
@@ -45,7 +60,7 @@
   .AddInitiative-form input {
     min-width: 300px;
   }
-}
+} */
 
 .AddInitiative-text {
   vertical-align: top;
