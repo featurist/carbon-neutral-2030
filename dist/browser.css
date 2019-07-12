@@ -652,6 +652,93 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .marker-cluster span {
 	line-height: 30px;
 	}
+.add-initiative {
+  background-color: rgba(255, 252, 249, 1);
+}
+.add-initiative-form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.add-initiative-pair {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.add-initiative-form label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+          flex: 1;
+  min-width: 300px;
+  vertical-align: top;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding: 2px;
+}
+@media (min-width: 756px) {
+  .add-initiative-pair {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+  }
+  .add-initiative-form label {
+    padding: 5px;
+  }
+}
+.add-initiative-form textarea {
+  height: 100px;
+  padding: 5px;
+}
+.add-initiative-form input {
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+@media (min-width: 756px) {
+  .add-initiative-form textarea {
+    min-width: 300px;
+  }
+
+  .add-initiative-form input {
+    min-width: 300px;
+  }
+}
+.add-initiative-text {
+  vertical-align: top;
+  display: inline-block;
+}
+.add-initiative-location {
+  height: 200px;
+}
+.add-initiative-label button {
+  font-size: 1.5em;
+  padding: 0px;
+  margin-left: 5px;
+}
+.add-initiative-category-lookup div {
+  display: -webkit-box;
+  display: flex;
+}
+ul {
+  padding: 0px;
+}
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+li:nth-child(odd) {
+  background-color: #fff;
+}
+li:nth-child(even) {
+  background-color: #eee;
+}
 .title-carbon {
   color: rgba(239, 71, 111, 1);
 }
