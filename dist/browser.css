@@ -652,17 +652,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .marker-cluster span {
 	line-height: 30px;
 	}
-.add-initiative {
+.AddInitiative {
   background-color: rgba(255, 252, 249, 1);
 }
-.add-initiative-form {
+.AddInitiative-form {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
 }
-.add-initiative-form label {
+.AddInitiative-pair {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.AddInitiative-form label {
   display: -webkit-box;
   display: flex;
   -webkit-box-flex: 1;
@@ -674,85 +683,65 @@ svg.leaflet-image-layer.leaflet-interactive path {
           flex-direction: column;
   padding: 2px;
 }
-.add-initiative-pair,
-.add-initiative-single {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-}
-.add-initiative-single label {
-  -webkit-box-flex: 1;
-          flex: 1;
-}
 @media (min-width: 756px) {
-  .add-initiative-single label {
-    -webkit-box-flex: 0.5;
-            flex: 0.5;
-  }
-}
-@media (min-width: 756px) {
-  .add-initiative-pair {
+  .AddInitiative-pair {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
   }
-  .add-initiative-form label {
+  .AddInitiative-form label {
     padding: 5px;
   }
 }
-.add-initiative-form textarea {
+.AddInitiative-form textarea {
   height: 100px;
   padding: 5px;
 }
-.add-initiative-form input {
+.AddInitiative-form input {
   -webkit-box-flex: 1;
           flex: 1;
 }
 @media (min-width: 756px) {
-  .add-initiative-form textarea {
+  .AddInitiative-form textarea {
     min-width: 300px;
   }
 
-  .add-initiative-form input {
+  .AddInitiative-form input {
     min-width: 300px;
   }
 }
-.add-initiative-text {
+.AddInitiative-text {
   vertical-align: top;
   display: inline-block;
 }
-.add-initiative-location {
+.AddInitiative-location {
   height: 200px;
 }
 @media (min-width: 756px) {
-  .add-initiative-location {
+  .AddInitiative-location {
     height: 350px;
   }
 }
-.add-initiative-label button {
+.AddInitiative-label button {
   font-size: 1.5em;
   padding: 0px;
   margin-left: 5px;
 }
-.add-initiative-category-lookup div {
+.AddInitiativeCategory-lookup div {
   display: -webkit-box;
   display: flex;
 }
-.add-initiative ul {
+.AddInitiative ul {
   padding: 0px;
 }
-.add-initiative li {
+.AddInitiative li {
   list-style-type: none;
   cursor: pointer;
 }
-.add-initiative li:nth-child(odd) {
+.AddInitiative li:nth-child(odd) {
   background-color: #fff;
 }
-.add-initiative li:nth-child(even) {
+.AddInitiative li:nth-child(even) {
   background-color: #eee;
 }
 .title-carbon {
@@ -768,7 +757,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   font-size: 1em;
   color: rgba(38, 84, 124, 1);
 }
-.explore {
+.Explore {
   background-color: rgba(255, 252, 249, 1);
   display: -webkit-box;
   display: flex;
@@ -778,12 +767,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
   -webkit-box-flex: 1;
           flex: 1;
 }
-.explore-navigation {
+.Explore-navigation {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
 }
-.explore-navigation a {
+.Explore-navigation a {
   -webkit-box-flex: 1;
           flex: 1;
   text-align: center;
@@ -794,21 +783,21 @@ svg.leaflet-image-layer.leaflet-interactive path {
   margin-right: 2px;
   margin-bottom: 2px;
 }
-.explore-navigation a:last-of-type {
+.Explore-navigation a:last-of-type {
   margin-right: 0px;
 }
-.explore-map {
+.Explore-map {
   height: 250px;
 }
 @media (min-width: 504px) {
-  .explore-navigation {
+  .Explore-navigation {
     flex-wrap: nowrap;
   }
-  .explore-map {
+  .Explore-map {
     height: 450px;
   }
 }
-.mission {
+.Mission {
   display: -webkit-box;
   display: flex;
   background-color: rgba(231, 185, 77, 1);
@@ -817,27 +806,27 @@ svg.leaflet-image-layer.leaflet-interactive path {
           flex-direction: column-reverse;
 }
 @media (min-width: 504px) {
-  .mission {
+  .Mission {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
   }
 }
-.mission-image {
+.Mission-image {
   -webkit-box-flex: 1;
           flex: 1;
   min-width: 0;
   margin: 5px;
 }
-.mission-image img {
+.Mission-image img {
   max-width: 100%; 
   max-height: 450px; 
 }
-.mission-statement {
+.Mission-statement {
   -webkit-box-flex: 1;
           flex: 1;
 }
-.navigation {
+.Navigation {
   display: -webkit-box;
   display: flex;
   -webkit-box-flex: 1;
@@ -847,13 +836,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
           flex-direction: column;
 }
 @media (min-width: 504px) {
-  .navigation {
+  .Navigation {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
   }
 }
-.navigation-logo {
+.Navigation-logo {
   -webkit-box-flex: 2.5;
           flex: 2.5;
 }
@@ -887,11 +876,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
     max-width: 200px;
   }
 }
-.welcome {
+.Welcome {
   background-color: rgba(239, 71, 111, 1);
   color: rgba(255, 252, 249, 1);
 }
-.welcome-items {
+.Welcome-items {
   display: -webkit-box;
   display: flex;
   -webkit-box-flex: 1;
@@ -901,32 +890,32 @@ svg.leaflet-image-layer.leaflet-interactive path {
           flex-direction: column;
 }
 @media (min-width: 756px) {
-  .welcome-items {
+  .Welcome-items {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
             flex-direction: row;
   }
 }
-.welcome-introduction {
+.Welcome-introduction {
   -webkit-box-flex: 1;
           flex: 1;
 }
-.welcome-headline {
+.Welcome-headline {
   -webkit-box-flex: 1;
           flex: 1;
 }
-.welcome-image {
+.Welcome-image {
   -webkit-box-flex: 1;
           flex: 1;
   min-width: 0;
   margin: 5px;
   text-align: center;
 }
-.welcome-image img {
+.Welcome-image img {
   max-width: 100%; 
   max-height: 450px; 
 }
-.welcome-actions {
+.Welcome-actions {
   display: -webkit-box;
   display: flex;
   -webkit-box-flex: 1;
@@ -939,7 +928,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   -webkit-box-align: center;
           align-items: center;
 }
-.welcome-actions a {
+.Welcome-actions a {
   display: block;
   width: 200px;
   text-align: center;
@@ -949,10 +938,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
   border: 5px rgba(255, 252, 249, 1) solid;
   margin: 5px;
 }
-.welcome-find {
+.Welcome-find {
   background-color: rgba(38, 84, 124, 1);
 }
-.welcome-add {
+.Welcome-add {
   background-color: rgba(231, 185, 77, 1);
 }
 body {
