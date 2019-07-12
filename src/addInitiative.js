@@ -31,6 +31,7 @@ class App {
       </div>
       <div class="add-initiative-pair">
         <label><span class="add-initiative-text">Status:</span> <select binding="this.initiative.status"><option>Planning</option><option>In Progress</option><option>Complete</option><option>Ongoing</option></select></label>
+        <label></label>
       </div>
       <h2>Categories</h2>
       <div class="add-initiative-pair">
