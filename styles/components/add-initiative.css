@@ -65,17 +65,17 @@
   display: flex;
 }
 
-ul {
+.add-initiative ul {
   padding: 0px;
 }
-li {
+.add-initiative li {
   list-style-type: none;
   cursor: pointer;
 }
 
-li:nth-child(odd) {
+.add-initiative li:nth-child(odd) {
   background-color: #fff;
 }
-li:nth-child(even) {
+.add-initiative li:nth-child(even) {
   background-color: #eee;
 }
