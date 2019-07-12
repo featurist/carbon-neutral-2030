@@ -1,43 +1,43 @@
-.welcome {
+.Welcome {
   background-color: $red;
   color: $snow;
 }
-.welcome-items {
+.Welcome-items {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
 
 @media (--bp-tablet) {
-  .welcome-items {
+  .Welcome-items {
     flex-direction: row;
   }
 }
 
-.welcome-introduction {
+.Welcome-introduction {
   flex: 1;
 }
-.welcome-headline {
+.Welcome-headline {
   flex: 1;
 }
-.welcome-image {
+.Welcome-image {
   flex: 1;
   min-width: 0;
   margin: 5px;
   text-align: center;
 }
-.welcome-image img {
+.Welcome-image img {
   max-width: 100%; 
   max-height: 450px; 
 }
-.welcome-actions {
+.Welcome-actions {
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.welcome-actions a {
+.Welcome-actions a {
   display: block;
   width: 200px;
   text-align: center;
@@ -48,10 +48,10 @@
   margin: 5px;
 }
 
-.welcome-find {
+.Welcome-find {
   background-color: $blue;
 }
 
-.welcome-add {
+.Welcome-add {
   background-color: $yellow;
 }

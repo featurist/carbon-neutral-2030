@@ -1,24 +1,24 @@
-.mission {
+.Mission {
   display: flex;
   background-color: $yellow;
   flex-direction: column-reverse;
 }
 
 @media (--bp-mobile) {
-  .mission {
+  .Mission {
     flex-direction: row;
   }
 }
 
-.mission-image {
+.Mission-image {
   flex: 1;
   min-width: 0;
   margin: 5px;
 }
-.mission-image img {
+.Mission-image img {
   max-width: 100%; 
   max-height: 450px; 
 }
-.mission-statement {
+.Mission-statement {
   flex: 1;
 }

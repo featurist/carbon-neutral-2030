@@ -1,18 +1,18 @@
-.add-initiative {
+.AddInitiative {
   background-color: $snow;
 }
 
-.add-initiative-form {
+.AddInitiative-form {
   display: flex;
   flex-direction: column;
 }
-.add-initiative-pair {
+.AddInitiative-pair {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
 
-.add-initiative-form label {
+.AddInitiative-form label {
   display: flex;
   flex: 1;
   min-width: 300px;
@@ -21,67 +21,67 @@
   padding: 2px;
 }
 @media (--bp-tablet) {
-  .add-initiative-pair {
+  .AddInitiative-pair {
     flex-direction: row;
   }
-  .add-initiative-form label {
+  .AddInitiative-form label {
     padding: 5px;
   }
 }
-.add-initiative-form textarea {
+.AddInitiative-form textarea {
   height: 100px;
   padding: 5px;
 }
 
-.add-initiative-form input {
+.AddInitiative-form input {
   flex: 1;
 }
 
 @media (--bp-tablet) {
-  .add-initiative-form textarea {
+  .AddInitiative-form textarea {
     min-width: 300px;
   }
 
-  .add-initiative-form input {
+  .AddInitiative-form input {
     min-width: 300px;
   }
 }
 
-.add-initiative-text {
+.AddInitiative-text {
   vertical-align: top;
   display: inline-block;
 }
 
-.add-initiative-location {
+.AddInitiative-location {
   height: 200px;
 }
 
 @media (--bp-tablet) {
-  .add-initiative-location {
+  .AddInitiative-location {
     height: 350px;
   }
 }
 
-.add-initiative-label button {
+.AddInitiative-label button {
   font-size: 1.5em;
   padding: 0px;
   margin-left: 5px;
 }
-.add-initiative-category-lookup div {
+.AddInitiativeCategory-lookup div {
   display: flex;
 }
 
-.add-initiative ul {
+.AddInitiative ul {
   padding: 0px;
 }
-.add-initiative li {
+.AddInitiative li {
   list-style-type: none;
   cursor: pointer;
 }
 
-.add-initiative li:nth-child(odd) {
+.AddInitiative li:nth-child(odd) {
   background-color: #fff;
 }
-.add-initiative li:nth-child(even) {
+.AddInitiative li:nth-child(even) {
   background-color: #eee;
 }

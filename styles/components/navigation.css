@@ -1,16 +1,16 @@
 
-.navigation {
+.Navigation {
   display: flex;
   flex: 1;
   flex-direction: column;
 }
 
 @media (--bp-mobile) {
-  .navigation {
+  .Navigation {
     flex-direction: row;
   }
 }
 
-.navigation-logo {
+.Navigation-logo {
   flex: 2.5;
 }

@@ -1,14 +1,14 @@
-.explore {
+.Explore {
   background-color: $snow;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.explore-navigation {
+.Explore-navigation {
   display: flex;
   flex-wrap: wrap;
 }
-.explore-navigation a {
+.Explore-navigation a {
   flex: 1;
   text-align: center;
   padding: 3px;
@@ -18,17 +18,17 @@
   margin-right: 2px;
   margin-bottom: 2px;
 }
-.explore-navigation a:last-of-type {
+.Explore-navigation a:last-of-type {
   margin-right: 0px;
 }
-.explore-map {
+.Explore-map {
   height: 250px;
 }
 @media (--bp-mobile) {
-  .explore-navigation {
+  .Explore-navigation {
     flex-wrap: nowrap;
   }
-  .explore-map {
+  .Explore-map {
     height: 450px;
   }
 }

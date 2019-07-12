@@ -16,7 +16,7 @@ export default class CategoryLookup {
   }
 
   render() {
-    return <div class="add-initiative-category-lookup">
+    return <div class="AddInitiativeCategory-lookup">
       <div>
         <input type="text" binding="this.value" placeholder="Search categories e.g. Solar" />
         <button onclick={() => this.toggleAll()}>&#x21b4;</button>
@@ -41,8 +41,8 @@ export default class CategoryLookup {
       return <p>No results</p>
     }
     if (this.results.length > 0) {
-      return <ul class="ResultsList">{this.results.map(category => {
-        return <li class="ResultsList-item" onclick={() => this.addCategory(category)}>
+      return <ul class="AddInitiativeResults">{this.results.map(category => {
+        return <li class="AddInitiativeResults-item" onclick={() => this.addCategory(category)}>
           {category.sector} > {category.theme} > {category.class} > {category.solution}
         </li>
       })}</ul>
