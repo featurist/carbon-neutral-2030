@@ -35,6 +35,7 @@
 
 .AddInitiative-form input {
   flex: 1;
+  flex-grow: 0;
 }
 
 @media (--bp-tablet) {
