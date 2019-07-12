@@ -662,15 +662,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   -webkit-box-direction: normal;
           flex-direction: column;
 }
-.add-initiative-pair {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-}
 .add-initiative-form label {
   display: -webkit-box;
   display: flex;
@@ -682,6 +673,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
   -webkit-box-direction: normal;
           flex-direction: column;
   padding: 2px;
+}
+.add-initiative-pair,
+.add-initiative-single {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.add-initiative-single label {
+  -webkit-box-flex: 1;
+          flex: 1;
+}
+@media (min-width: 756px) {
+  .add-initiative-single label {
+    -webkit-box-flex: 0.5;
+            flex: 0.5;
+  }
 }
 @media (min-width: 756px) {
   .add-initiative-pair {
