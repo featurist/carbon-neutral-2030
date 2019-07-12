@@ -1,0 +1,81 @@
+.add-initiative {
+  background-color: $snow;
+}
+
+.add-initiative-form {
+  display: flex;
+  flex-direction: column;
+}
+.add-initiative-pair {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.add-initiative-form label {
+  display: flex;
+  flex: 1;
+  min-width: 300px;
+  vertical-align: top;
+  flex-direction: column;
+  padding: 2px;
+}
+@media (--bp-tablet) {
+  .add-initiative-pair {
+    flex-direction: row;
+  }
+  .add-initiative-form label {
+    padding: 5px;
+  }
+}
+.add-initiative-form textarea {
+  height: 100px;
+  padding: 5px;
+}
+
+.add-initiative-form input {
+  flex: 1;
+}
+
+@media (--bp-tablet) {
+  .add-initiative-form textarea {
+    min-width: 300px;
+  }
+
+  .add-initiative-form input {
+    min-width: 300px;
+  }
+}
+
+.add-initiative-text {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.add-initiative-location {
+  height: 200px;
+}
+
+.add-initiative-label button {
+  font-size: 1.5em;
+  padding: 0px;
+  margin-left: 5px;
+}
+.add-initiative-category-lookup div {
+  display: flex;
+}
+
+ul {
+  padding: 0px;
+}
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+li:nth-child(odd) {
+  background-color: #fff;
+}
+li:nth-child(even) {
+  background-color: #eee;
+}

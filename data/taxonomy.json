@@ -1,0 +1,44 @@
+[
+  {
+    "sector": "Energy",
+    "theme": "Electricty Generation",
+    "class": "Solar PV",
+    "solution": "Rooftop Solar PV"
+  },
+  {
+    "sector": "Energy",
+    "theme": "Electricty Generation",
+    "class": "Solar PV",
+    "solution": "Solar PV Farms"
+  },
+  {
+    "sector": "Energy",
+    "theme": "Electricty Generation",
+    "class": "Wind",
+    "solution": "Micro Wind"
+  },
+  {
+    "sector": "Energy",
+    "theme": "Electricty Generation",
+    "class": "Wind",
+    "solution": "Wind Turbines (Offshore)"
+  },
+  {
+    "sector": "Energy",
+    "theme": "Electricty Generation",
+    "class": "Wind",
+    "solution": "Wind Turbines (Onshore)"
+  },
+  {
+    "sector": "Food",
+    "theme": "Agriculture & Land",
+    "class": "Farm Management",
+    "solution": "Farmland Irrigation"
+  },
+  {
+    "sector": "Food",
+    "theme": "Agriculture & Land",
+    "class": "Farm Management",
+    "solution": "Farmland Restoration"
+  }
+]
