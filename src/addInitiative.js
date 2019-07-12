@@ -46,6 +46,7 @@ class App {
         <label><span class="add-initiative-text">Name:</span> <input type="text" binding="this.initiative.location.name" placeholder="Pleasentville Town Centre" /></label>
         <label><span class="add-initiative-text">Address:</span> <input type="text" binding="this.initiative.location.address" placeholder="23a High St, Pleasentville, PL3 5VL" /></label>
       </div>
+      <p>Drag the marker to the location of the initiative</p>
       <div class="add-initiative-location" id="location">
       </div>
       <button>Add Initiative</button>
