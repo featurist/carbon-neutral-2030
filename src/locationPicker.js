@@ -3,9 +3,9 @@ import { GestureHandling } from "leaflet-gesture-handling";
 let locationMap
 
 export default function (id, location) {
-  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+  //L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
   locationMap = L.map(id, {
-    gestureHandling: true,
+    //gestureHandling: true,
     center: [51.742, -2.222],
     zoom: 13,
   })

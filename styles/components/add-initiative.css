@@ -6,16 +6,18 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .AddInitiative-formItem {
   flex-grow: 1;
   flex-basis: 100%;
   display: flex;
   flex-direction: column;
+  margin: 2px;
 }
 
 @media (--bp-tablet) {
   .AddInitiative-formItem {
-    flex-basis: 50%;
+    flex-basis: 48%;
   }
 }
 
@@ -24,44 +26,14 @@
   padding-bottom: 2px;
 }
 
-.AddInitiative-input {
-}
-
 .AddInitiative-textarea {
   min-height: 100px;
+  padding: 5px;
 }
 
 .AddInitiative-formHeading {
   flex-basis: 100%;
 }
-
-/* @media (--bp-tablet) {
-  .AddInitiative-pair {
-    flex-direction: row;
-  }
-  .AddInitiative-form label {
-    padding: 5px;
-  }
-}
-.AddInitiative-form textarea {
-  height: 100px;
-  padding: 5px;
-}
-
-.AddInitiative-form input {
-  flex: 1;
-  flex-grow: 0;
-}
-
-@media (--bp-tablet) {
-  .AddInitiative-form textarea {
-    min-width: 300px;
-  }
-
-  .AddInitiative-form input {
-    min-width: 300px;
-  }
-} */
 
 .AddInitiative-text {
   vertical-align: top;
@@ -83,13 +55,19 @@
   padding: 0px;
   margin-left: 5px;
 }
+
 .AddInitiativeCategory-lookup div {
   display: flex;
+}
+
+.AddInitiativeCategory-lookup input {
+  width: 100%;
 }
 
 .AddInitiative ul {
   padding: 0px;
 }
+
 .AddInitiative li {
   list-style-type: none;
   cursor: pointer;
@@ -98,6 +76,11 @@
 .AddInitiative li:nth-child(odd) {
   background-color: #fff;
 }
+
 .AddInitiative li:nth-child(even) {
   background-color: #eee;
+}
+
+.AddInitiative-fullWidth {
+  flex-basis: 100%;
 }
