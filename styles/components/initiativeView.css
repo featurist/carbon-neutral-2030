@@ -1,0 +1,16 @@
+.InitiativeView {
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+.InitiativeView-disableScrolling {
+  overflow: hidden;
+}
+.InitiativeView-scroll {
+  height: 400px;
+  overflow-y: auto;
+}

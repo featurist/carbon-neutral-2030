@@ -24,13 +24,38 @@ export default function () {
 
   mappedInitiatives = initiatives.map(initiative => {
     var marker = L.marker(initiative.location.latlng)
-    marker.bindPopup(`<h1>${initiative.name}</h1>
+    const initiativeHtml = `<h1>${initiative.name}</h1>
           <p>${initiative.summary}</p>
+          <p>Group: ${initiative.group}</p>
+          <p>Contact Name: ${initiative.contactName}</p>
           <p>Status: ${initiative.status}</p>
+          ${initiative.website ? `<p>Website: <a target="_blank" href="${initiative.website}">${initiative.website}</a></p>` : ''}
+          ${initiative.email ? `<p>Email: <a href="mailto:${initiative.email}">${initiative.email}</a></p>` : ''}
           <p>Sector: ${initiative.sector}</p>
           <p>Theme: ${initiative.theme}</p>
           <p>Solution: ${initiative.solution}</p>
-           `)
+          <p>Notes: ${initiative.notes}</p>
+          <p>Added By: ${initiative.addedBy}</p>
+          <p>Added On: ${initiative.timestamp}</p>
+           `
+    if (window.innerHeight < 600) {
+      marker.on('click', () => {
+        const initiative = document.createElement('section')
+        initiative.className = 'InitiativeView'
+        initiative.innerHTML = `
+          <button class="InitiativeView-close">X</button>
+          ${initiativeHtml}
+        `
+        document.body.appendChild(initiative)
+        document.body.classList.add('InitiativeView-disableScrolling')
+        initiative.querySelector('.InitiativeView-close').addEventListener('click', () => {
+          document.body.removeChild(initiative)
+          document.body.classList.remove('InitiativeView-disableScrolling')
+        })
+      })
+    } else {
+      marker.bindPopup(`<div class="InitiativeView-scroll">${initiativeHtml}</div>`)
+    }
     markers.addLayer(marker)
     return {
       initiative,
