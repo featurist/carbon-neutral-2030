@@ -697,59 +697,34 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .AddInitiative-form {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-wrap: wrap;
 }
-.AddInitiative-pair {
+.AddInitiative-formItem {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  flex-basis: 100%;
   display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 1;
-          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-}
-.AddInitiative-form label {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-flex: 1;
-          flex: 1;
-  min-width: 300px;
-  vertical-align: top;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  padding: 2px;
+  margin: 2px;
 }
 @media (min-width: 756px) {
-  .AddInitiative-pair {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-  }
-  .AddInitiative-form label {
-    padding: 5px;
+  .AddInitiative-formItem {
+    flex-basis: 48%;
   }
 }
-.AddInitiative-form textarea {
-  height: 100px;
+.AddInitiative-label {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.AddInitiative-textarea {
+  min-height: 100px;
   padding: 5px;
 }
-.AddInitiative-form input {
-  -webkit-box-flex: 1;
-          flex: 1;
-  -webkit-box-flex: 0;
-          flex-grow: 0;
-}
-@media (min-width: 756px) {
-  .AddInitiative-form textarea {
-    min-width: 300px;
-  }
-
-  .AddInitiative-form input {
-    min-width: 300px;
-  }
+.AddInitiative-formHeading {
+  flex-basis: 100%;
 }
 .AddInitiative-text {
   vertical-align: top;
@@ -772,6 +747,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
   display: -webkit-box;
   display: flex;
 }
+.AddInitiativeCategory-lookup input {
+  width: 100%;
+}
 .AddInitiative ul {
   padding: 0px;
 }
@@ -784,6 +762,25 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 .AddInitiative li:nth-child(even) {
   background-color: #eee;
+}
+.AddInitiative-fullWidth {
+  flex-basis: 100%;
+}
+.InitiativeView {
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  overflow-y: scroll;
+}
+.InitiativeView-disableScrolling {
+  overflow: hidden;
+}
+.InitiativeView-scroll {
+  height: 400px;
+  overflow-y: auto;
 }
 .title-carbon {
   color: rgba(239, 71, 111, 1);
