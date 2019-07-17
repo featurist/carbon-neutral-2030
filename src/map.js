@@ -2,10 +2,12 @@ import initiatives from '../data/initiatives.json'
 import L from 'leaflet'
 import MarkerCluster from 'leaflet.markercluster'
 import { GestureHandling } from "leaflet-gesture-handling";
+import mobileCheck from "./mobileCheck"
 
 let carbonExplorer, mappedInitiatives, markers
 
 export default function () {
+  const isMobile = mobileCheck()
   L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
   carbonExplorer = L.map('explore', {
     gestureHandling: true,
@@ -38,7 +40,7 @@ export default function () {
           <p>Added By: ${initiative.addedBy}</p>
           <p>Added On: ${initiative.timestamp}</p>
            `
-    if (window.innerHeight < 600) {
+    if (isMobile) {
       marker.on('click', () => {
         const initiative = document.createElement('section')
         initiative.className = 'InitiativeView'
