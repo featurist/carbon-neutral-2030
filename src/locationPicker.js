@@ -1,11 +1,15 @@
 import L from 'leaflet'
 import { GestureHandling } from "leaflet-gesture-handling";
+import mobileCheck from "./mobileCheck"
 let locationMap
 
 export default function (id, location) {
-  //L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+  const isMobile = mobileCheck()
+  if (!isMobile) {
+    L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+  }
   locationMap = L.map(id, {
-    //gestureHandling: true,
+    gestureHandling: !isMobile,
     center: [51.742, -2.222],
     zoom: 13,
   })
