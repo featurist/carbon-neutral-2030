@@ -743,11 +743,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
   padding: 0px;
   margin-left: 5px;
 }
-.AddInitiativeCategory-lookup div {
+.AddInitiativeSolution-lookup div {
   display: -webkit-box;
   display: flex;
 }
-.AddInitiativeCategory-lookup input {
+.AddInitiativeSolution-lookup input {
   width: 100%;
 }
 .AddInitiative ul {
