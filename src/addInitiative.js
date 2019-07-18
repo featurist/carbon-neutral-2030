@@ -1,5 +1,5 @@
 import hyperdom from 'hyperdom'
-import CategoryLookup from './categoryLookup'
+import SolutionLookup from './solutionLookup'
 import locationPicker from './locationPicker'
 
 class App {
@@ -7,7 +7,7 @@ class App {
     this.initiative = {
       location: {}
     }
-    this.category = new CategoryLookup()
+    this.solution = new SolutionLookup()
   }
   onadd () {
     locationPicker('location', this.initiative.location)
@@ -50,16 +50,16 @@ class App {
       </div>
 
       
-      <h2 class="AddInitiative-formHeading">Categories</h2>
+      <h2 class="AddInitiative-formHeading">Solutions</h2>
       
       {/* Needs refactor to follow the format above */}
       <label class="AddInitiative-formItem">
-        <span class="AddInitiative-text">Categories:</span>
-          {this.renderCategories()}
+        <span class="AddInitiative-text">Solutions:</span>
+          {this.renderSolutions()}
       </label>
       <label class="AddInitiative-formItem">
-        <span class="AddInitiative-text">Add Category:</span>
-          {this.category}
+        <span class="AddInitiative-text">Add Solution:</span>
+          {this.solution}
       </label>
       <h2 class="AddInitiative-formHeading">Location</h2>
       <label class="AddInitiative-formItem">
@@ -79,12 +79,12 @@ class App {
     </div>
   }
 
-  renderCategories() {
-    if (this.category.categories.length === 0) {
-      return <div>Please select a category</div>
+  renderSolutions() {
+    if (this.solution.solutions.length === 0) {
+      return <div>Please select a solution</div>
     } else {
-    return this.category.categories.map(category => {
-      return <div>{category.sector} > {category.theme} > {category.class} > {category.solution}</div>
+    return this.solution.solutions.map(solution => {
+      return <div>{solution.sector} > {solution.theme} > {solution.class} > {solution.solution}</div>
     })
     }
   }

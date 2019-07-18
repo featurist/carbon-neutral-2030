@@ -56,11 +56,11 @@
   margin-left: 5px;
 }
 
-.AddInitiativeCategory-lookup div {
+.AddInitiativeSolution-lookup div {
   display: flex;
 }
 
-.AddInitiativeCategory-lookup input {
+.AddInitiativeSolution-lookup input {
   width: 100%;
 }
 

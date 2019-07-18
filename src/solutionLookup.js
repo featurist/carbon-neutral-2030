@@ -8,17 +8,17 @@ function renderLoading () {
   return 'Loading...'
 }
 
-export default class CategoryLookup {
+export default class SolutionLookup {
   constructor() {
     this.results = []
     this.isValid = false
-    this.categories = []
+    this.solutions = []
   }
 
   render() {
-    return <div class="AddInitiativeCategory-lookup">
+    return <div class="AddInitiativeSolution-lookup">
       <div>
-        <input type="text" binding="this.value" placeholder="Search categories e.g. Solar" />
+        <input type="text" binding="this.value" placeholder="Search solutions e.g. Solar" />
         <button onclick={() => this.toggleAll()}>&#x21b4;</button>
       </div>
       {this.renderResults()}
@@ -41,16 +41,16 @@ export default class CategoryLookup {
       return <p>No results</p>
     }
     if (this.results.length > 0) {
-      return <ul class="AddInitiativeResults">{this.results.map(category => {
-        return <li class="AddInitiativeResults-item" onclick={() => this.addCategory(category)}>
-          {category.sector} > {category.theme} > {category.class} > {category.solution}
+      return <ul class="AddInitiativeResults">{this.results.map(solution => {
+        return <li class="AddInitiativeResults-item" onclick={() => this.addSolution(solution)}>
+          {solution.sector} > {solution.theme} > {solution.class} > {solution.solution}
         </li>
       })}</ul>
     }
   }
 
-  addCategory (category) {
-    this.categories.push(category)
+  addSolution (solution) {
+    this.solutions.push(solution)
     this.value = ''
     this.results = []
   }
