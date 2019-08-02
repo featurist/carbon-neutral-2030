@@ -80,6 +80,9 @@
   position: absolute;
   right: 10px;
 }
+.AddInitiativeSolution-removeSolution {
+  float: right;
+}
 .AddInitiativeSolution-group {
   flex: 10 0 auto;
   min-width: 100%;

@@ -153,6 +153,11 @@ export default class SolutionLookup {
     this.results = []
   }
 
+  removeSolution (solution) {
+    const solutionIndex = this.solutions.indexOf(solution)
+    this.solutions.splice(solutionIndex, 1)
+  }
+
   async search() {
     if (this.value) {
       this.inProgress = true

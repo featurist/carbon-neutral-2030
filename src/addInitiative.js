@@ -144,7 +144,7 @@ class App {
       return <div>Please select a solution</div>
     } else {
       return <ul class="AddInitiativeSolution-solutions">{this.solution.solutions.map(solution => {
-        return <li>{solution.sector} > {solution.theme} > {solution.class} > {solution.solution}</li>
+        return <li>{solution.sector} > {solution.theme} > {solution.class} > {solution.solution} <span class="AddInitiativeSolution-removeSolution" onclick={() => this.solution.removeSolution(solution)}>[ remove ]</span></li>
       })}
     </ul>
     }
