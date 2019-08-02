@@ -765,16 +765,24 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .AddInitiativeSolution-groupContainer {
   overflow: hidden;
 }
+.AddInitiativeSolution-clear {
+  position: absolute;
+  right: 10px;
+}
 .AddInitiativeSolution-group {
   -webkit-box-flex: 10;
           flex: 10 0 auto;
   min-width: 100%;
+}
+.AddInitiativeSolution-group li {
+  padding: 3px;
 }
 .AddInitiativeSolution-groupSelected {
   display: none;
 }
 .AddInitiative ul {
   padding: 0px;
+  margin-top: 0px;
 }
 .AddInitiative li {
   list-style-type: none;

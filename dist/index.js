@@ -23492,7 +23492,9 @@ function () {
 
       return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", {
         "class": "AddInitiative-form"
-      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("h2", {
+        "class": "AddInitiative-formHeading"
+      }, "Initiative"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
         "class": "AddInitiative-text"
@@ -23505,10 +23507,19 @@ function () {
         "class": "AddInitiative-formItem"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
         "class": "AddInitiative-text"
-      }, "Description:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("textarea", {
+      }, "Summary:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("textarea", {
         "class": "AddInitiative-textarea",
         binding: [this.initiative, "summary"],
         placeholder: "Provides food for those in need in the Pleasentville area"
+      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", null, "Initiative Image"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
+        "class": "AddInitiative-formItem"
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+        "class": "AddInitiative-text"
+      }, "Anticipated Carbon Saving:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+        "class": "AddInitiative-input",
+        type: "text",
+        binding: [this.initiative, "anticipatedCarbonSaving"],
+        placeholder: "200kgCO2e"
       })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
@@ -23540,10 +23551,19 @@ function () {
         "class": "AddInitiative-formItem"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
         "class": "AddInitiative-text"
-      }, "Group:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+      }, "Telephone:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
         "class": "AddInitiative-input",
         type: "text",
-        binding: [this.initiative, "group"],
+        binding: [this.initiative, "telephone"],
+        placeholder: "075 555 555 55"
+      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
+        "class": "AddInitiative-formItem"
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+        "class": "AddInitiative-text"
+      }, "Lead Group:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+        "class": "AddInitiative-input",
+        type: "text",
+        binding: [this.initiative, "leadGroup"],
         placeholder: "Transition Pleasentville"
       })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem"
@@ -23552,9 +23572,16 @@ function () {
       }, "Status:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("select", {
         "class": "AddInitiative-input",
         binding: [this.initiative, "status"]
-      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Planning"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "In Progress"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Complete"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Ongoing"))), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", {
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Initiation"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Planning"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Implementation"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Operational"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Completed"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("option", null, "Abandoned"))), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem"
-      }), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("h2", {
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+        "class": "AddInitiative-text"
+      }, "Related Initiative(s):"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+        "class": "AddInitiative-input",
+        type: "text",
+        binding: [this.initiative, "relatedInitiatives"],
+        placeholder: "Pleasentville Energy Trust, Hopeville Solar"
+      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("h2", {
         "class": "AddInitiative-formHeading"
       }, "Solutions"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem"
@@ -23570,18 +23597,10 @@ function () {
         "class": "AddInitiative-formItem"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
         "class": "AddInitiative-text"
-      }, "Name:"), " ", hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+      }, "Locality:"), " ", hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
         type: "text",
-        binding: [this.initiative.location, "name"],
+        binding: [this.initiative.location, "locality"],
         placeholder: "Pleasentville Town Centre"
-      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
-        "class": "AddInitiative-formItem"
-      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
-        "class": "AddInitiative-text"
-      }, "Address:"), " ", hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
-        type: "text",
-        binding: [this.initiative.location, "address"],
-        placeholder: "23a High St, Pleasentville"
       })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
@@ -23598,7 +23617,29 @@ function () {
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("p", null, "Drag the marker to the location of the initiative"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", {
         "class": "AddInitiative-location",
         id: "location"
+      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("h2", {
+        "class": "AddInitiative-formHeading"
+      }, "Partner Group"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
+        "class": "AddInitiative-formItem"
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+        "class": "AddInitiative-text"
+      }, "Partner Group(s):"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+        "class": "AddInitiative-input",
+        type: "text",
+        binding: [this.initiative, "partnerGroups"],
+        placeholder: "Transition Pleasentville"
       })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
+        "class": "AddInitiative-formItem"
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+        "class": "AddInitiative-text"
+      }, "Partner Group(s) Role:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+        "class": "AddInitiative-input",
+        type: "text",
+        binding: [this.initiative, "partnerGroupsRole"],
+        placeholder: "GCEC are providing fulfilment of the project while XYZ Schools Trust have underwritten the financial case"
+      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", {
+        "class": "AddInitiative-formItem"
+      }), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem AddInitiative-fullWidth"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("button", null, "Add Initiative")));
     }
@@ -23979,18 +24020,9 @@ function () {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(SolutionLookup, [{
     key: "render",
     value: function render() {
-      var _this = this;
-
       return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", {
         "class": "AddInitiativeSolution-lookup"
-      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", null, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
-        type: "text",
-        binding: [this, "value"],
-        placeholder: "Search solutions e.g. Solar",
-        oninput: function oninput() {
-          return _this.search();
-        }
-      })), this.renderResults());
+      }, this.renderResults());
     }
   }, {
     key: "navigate",
@@ -24029,7 +24061,7 @@ function () {
   }, {
     key: "renderResults",
     value: function renderResults() {
-      var _this2 = this;
+      var _this = this;
 
       if (this.inProgress) {
         return renderLoading('Searching');
@@ -24046,7 +24078,7 @@ function () {
           return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", {
             "class": "AddInitiativeResults-item",
             onclick: function onclick() {
-              return _this2.addSolution(solution);
+              return _this.addSolution(solution);
             }
           }, solution.sector, " > ", solution.theme, " > ", solution["class"], " > ", solution.solution);
         }));
@@ -24063,8 +24095,6 @@ function () {
   }, {
     key: "renderBreadcrumb",
     value: function renderBreadcrumb() {
-      var _this3 = this;
-
       var self = this;
 
       function renderSector() {
@@ -24075,46 +24105,53 @@ function () {
                 sector: self.navigation.sector
               });
             }
-          }, " > ", self.navigation.sector.name);
+          }, self.navigation.sector.name);
         }
       }
 
       function renderTheme() {
         if (self.navigation.theme) {
-          return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+          return [hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", null, "\xA0>\xA0"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
             onclick: function onclick() {
               return self.navigate({
                 theme: self.navigation.theme
               });
             }
-          }, " > ", self.navigation.theme.name);
+          }, self.navigation.theme.name)];
         }
       }
 
       function renderSolutionClass() {
         if (self.navigation.solutionClass) {
-          return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+          return [hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", null, "\xA0>\xA0"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
             onclick: function onclick() {
               return self.navigate({
                 solutionClass: self.navigation.solutionClass
               });
             }
-          }, " > ", self.navigation.solutionClass.name);
+          }, self.navigation.solutionClass.name)];
+        }
+      }
+
+      function renderClear() {
+        if (self.navigation.sector || self.navigation.theme || self.navigation.solutionClass) {
+          return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+            "class": "AddInitiativeSolution-clear",
+            onclick: function onclick() {
+              return self.navigate();
+            }
+          }, "[ clear ]");
         }
       }
 
       return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", {
         "class": "AddInitiativeSolution-breadcrumb"
-      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
-        onclick: function onclick() {
-          return _this3.navigate();
-        }
-      }, "All"), renderSector(), renderTheme(), renderSolutionClass());
+      }, renderSector(), renderTheme(), renderSolutionClass(), renderClear());
     }
   }, {
     key: "renderSectors",
     value: function renderSectors() {
-      var _this4 = this;
+      var _this2 = this;
 
       return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("ul", {
         "class": {
@@ -24124,7 +24161,7 @@ function () {
       }, taxonomyHierarchy.map(function (sector) {
         return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", {
           onclick: function onclick() {
-            return _this4.navigate({
+            return _this2.navigate({
               sector: sector
             });
           }
@@ -24134,7 +24171,7 @@ function () {
   }, {
     key: "renderThemes",
     value: function renderThemes() {
-      var _this5 = this;
+      var _this3 = this;
 
       if (this.navigation.sector) {
         return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("ul", {
@@ -24145,7 +24182,7 @@ function () {
         }, this.navigation.sector.themes.map(function (theme) {
           return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", {
             onclick: function onclick() {
-              return _this5.navigate({
+              return _this3.navigate({
                 theme: theme
               });
             }
@@ -24156,7 +24193,7 @@ function () {
   }, {
     key: "renderClasses",
     value: function renderClasses() {
-      var _this6 = this;
+      var _this4 = this;
 
       if (this.navigation.theme) {
         return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("ul", {
@@ -24167,7 +24204,7 @@ function () {
         }, this.navigation.theme.classes.map(function (solutionClass) {
           return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", {
             onclick: function onclick() {
-              return _this6.navigate({
+              return _this4.navigate({
                 solutionClass: solutionClass
               });
             }
@@ -24178,7 +24215,7 @@ function () {
   }, {
     key: "renderSolutions",
     value: function renderSolutions() {
-      var _this7 = this;
+      var _this5 = this;
 
       if (this.navigation.solutionClass) {
         return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("ul", {
@@ -24186,14 +24223,14 @@ function () {
         }, this.navigation.solutionClass.solutions.map(function (solution) {
           return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", {
             onclick: function onclick() {
-              return _this7.addSolution({
-                sector: _this7.navigation.sector.name,
-                theme: _this7.navigation.theme.name,
-                "class": _this7.navigation.solutionClass.name,
+              return _this5.addSolution({
+                sector: _this5.navigation.sector.name,
+                theme: _this5.navigation.theme.name,
+                "class": _this5.navigation.solutionClass.name,
                 solution: solution.name
               });
             }
-          }, solution.name);
+          }, solution.name, " [ add ]");
         }));
       }
     }
