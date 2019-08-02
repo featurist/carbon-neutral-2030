@@ -23731,12 +23731,21 @@ function () {
   }, {
     key: "renderSolutions",
     value: function renderSolutions() {
+      var _this3 = this;
+
       if (this.solution.solutions.length === 0) {
         return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", null, "Please select a solution");
       } else {
-        return this.solution.solutions.map(function (solution) {
-          return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("div", null, solution.sector, " > ", solution.theme, " > ", solution["class"], " > ", solution.solution);
-        });
+        return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("ul", {
+          "class": "AddInitiativeSolution-solutions"
+        }, this.solution.solutions.map(function (solution) {
+          return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", null, solution.sector, " > ", solution.theme, " > ", solution["class"], " > ", solution.solution, " ", hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+            "class": "AddInitiativeSolution-removeSolution",
+            onclick: function onclick() {
+              return _this3.solution.removeSolution(solution);
+            }
+          }, "[ remove ]"));
+        }));
       }
     }
   }]);
@@ -24225,9 +24234,10 @@ function () {
 
       if (this.navigation.solutionClass) {
         return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("ul", {
-          "class": "AddInitiativeSolution-group"
+          "class": "AddInitiativeSolution-group AddInitiativeSolution-solutionSelector"
         }, this.navigation.solutionClass.solutions.map(function (solution) {
-          return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", {
+          return hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("li", null, solution.name, " ", hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+            "class": "AddInitiativeSolution-addSolution",
             onclick: function onclick() {
               return _this5.addSolution({
                 sector: _this5.navigation.sector.name,
@@ -24236,7 +24246,7 @@ function () {
                 solution: solution.name
               });
             }
-          }, solution.name, " [ add ]");
+          }, "[ add ]"));
         }));
       }
     }
@@ -24246,6 +24256,12 @@ function () {
       this.solutions.push(solution);
       this.value = '';
       this.results = [];
+    }
+  }, {
+    key: "removeSolution",
+    value: function removeSolution(solution) {
+      var solutionIndex = this.solutions.indexOf(solution);
+      this.solutions.splice(solutionIndex, 1);
     }
   }, {
     key: "search",
