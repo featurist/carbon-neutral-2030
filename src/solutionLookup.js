@@ -20,9 +20,6 @@ export default class SolutionLookup {
 
   render() {
     return <div class="AddInitiativeSolution-lookup">
-      <div>
-        <input type="text" binding="this.value" placeholder="Search solutions e.g. Solar" oninput={() => this.search()} />
-      </div>
       {this.renderResults()}
     </div>
   }
@@ -81,24 +78,29 @@ export default class SolutionLookup {
     const self = this
     function renderSector() {
       if (self.navigation.sector) {
-        return <span onclick={() => self.navigate({sector: self.navigation.sector})}> > {self.navigation.sector.name}</span>
+        return <span onclick={() => self.navigate({sector: self.navigation.sector})}>{self.navigation.sector.name}</span>
       }
     }
     function renderTheme() {
       if (self.navigation.theme) {
-        return <span onclick={() => self.navigate({theme: self.navigation.theme})}> > {self.navigation.theme.name}</span>
+        return [<span>&nbsp;>&nbsp;</span>, <span onclick={() => self.navigate({theme: self.navigation.theme})}>{self.navigation.theme.name}</span>]
       }
     }
     function renderSolutionClass() {
       if (self.navigation.solutionClass) {
-        return <span onclick={() => self.navigate({solutionClass: self.navigation.solutionClass})}> > {self.navigation.solutionClass.name}</span>
+        return [<span>&nbsp;>&nbsp;</span>, <span onclick={() => self.navigate({solutionClass: self.navigation.solutionClass})}>{self.navigation.solutionClass.name}</span>]
+      }
+    }
+    function renderClear() {
+      if (self.navigation.sector || self.navigation.theme || self.navigation.solutionClass) {
+        return <span class="AddInitiativeSolution-clear" onclick={() => self.navigate()}>[ clear ]</span>
       }
     }
     return <div class="AddInitiativeSolution-breadcrumb">
-      <span onclick={() => this.navigate()}>All</span>
       {renderSector()}
       {renderTheme()}
       {renderSolutionClass()}
+      {renderClear()}
     </div>
   }
 
@@ -139,7 +141,7 @@ export default class SolutionLookup {
               theme: this.navigation.theme.name,
               class: this.navigation.solutionClass.name,
               solution: solution.name,
-            })}>{solution.name}</li>
+            })}>{solution.name} [ add ]</li>
           })}
           </ul>
     }

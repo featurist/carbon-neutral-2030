@@ -76,9 +76,16 @@
 .AddInitiativeSolution-groupContainer {
   overflow: hidden;
 }
+.AddInitiativeSolution-clear {
+  position: absolute;
+  right: 10px;
+}
 .AddInitiativeSolution-group {
   flex: 10 0 auto;
   min-width: 100%;
+}
+.AddInitiativeSolution-group li {
+  padding: 3px;
 }
 .AddInitiativeSolution-groupSelected {
   display: none;
@@ -86,6 +93,7 @@
 
 .AddInitiative ul {
   padding: 0px;
+  margin-top: 0px;
 }
 
 .AddInitiative li {
