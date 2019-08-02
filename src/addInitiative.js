@@ -29,7 +29,10 @@ class App {
         <span class="AddInitiative-text">Summary:</span>
         <textarea class="AddInitiative-textarea" binding="this.initiative.summary" placeholder="Provides food for those in need in the Pleasentville area"></textarea>
       </label>
-      <label>Initiative Image</label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Initiative Image:</span>
+        <input type="file" />
+      </label>
 
       <label class="AddInitiative-formItem">
         <span class="AddInitiative-text">Anticipated Carbon Saving:</span>
