@@ -23511,7 +23511,13 @@ function () {
         "class": "AddInitiative-textarea",
         binding: [this.initiative, "summary"],
         placeholder: "Provides food for those in need in the Pleasentville area"
-      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", null, "Initiative Image"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
+      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
+        "class": "AddInitiative-formItem"
+      }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
+        "class": "AddInitiative-text"
+      }, "Initiative Image:"), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("input", {
+        type: "file"
+      })), hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("label", {
         "class": "AddInitiative-formItem"
       }, hyperdom__WEBPACK_IMPORTED_MODULE_4___default.a.jsx("span", {
         "class": "AddInitiative-text"
