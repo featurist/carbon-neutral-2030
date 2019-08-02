@@ -750,6 +750,29 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .AddInitiativeSolution-lookup input {
   width: 100%;
 }
+.AddInitiativeSolution-breadcrumb {
+  font-size: 0.8em;
+}
+.AddInitiativeSolution-breadcrumb span {
+  cursor: pointer;
+  white-space: nowrap;
+}
+.AddInitiativeSolution-groupResults {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.AddInitiativeSolution-groupContainer {
+  overflow: hidden;
+}
+.AddInitiativeSolution-group {
+  -webkit-box-flex: 10;
+          flex: 10 0 auto;
+  min-width: 100%;
+}
+.AddInitiativeSolution-groupSelected {
+  display: none;
+}
 .AddInitiative ul {
   padding: 0px;
 }
