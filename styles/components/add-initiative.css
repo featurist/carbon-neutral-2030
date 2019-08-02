@@ -63,6 +63,26 @@
 .AddInitiativeSolution-lookup input {
   width: 100%;
 }
+.AddInitiativeSolution-breadcrumb {
+  font-size: 0.8em;
+}
+.AddInitiativeSolution-breadcrumb span {
+  cursor: pointer;
+  white-space: nowrap;
+}
+.AddInitiativeSolution-groupResults {
+  flex-direction: column;
+}
+.AddInitiativeSolution-groupContainer {
+  overflow: hidden;
+}
+.AddInitiativeSolution-group {
+  flex: 10 0 auto;
+  min-width: 100%;
+}
+.AddInitiativeSolution-groupSelected {
+  display: none;
+}
 
 .AddInitiative ul {
   padding: 0px;

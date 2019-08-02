@@ -54,15 +54,14 @@ class App {
       
       <h2 class="AddInitiative-formHeading">Solutions</h2>
       
-      {/* Needs refactor to follow the format above */}
       <label class="AddInitiative-formItem">
         <span class="AddInitiative-text">Solutions:</span>
           {this.renderSolutions()}
       </label>
-      <label class="AddInitiative-formItem">
+      <div class="AddInitiative-formItem">
         <span class="AddInitiative-text">Add Solution:</span>
           {this.solution}
-      </label>
+      </div>
       <h2 class="AddInitiative-formHeading">Location</h2>
       <label class="AddInitiative-formItem">
         <span class="AddInitiative-text">Name:</span> <input type="text" binding="this.initiative.location.name" placeholder="Pleasentville Town Centre" />

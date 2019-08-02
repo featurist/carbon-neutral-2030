@@ -1,5 +1,6 @@
 import hyperdom from 'hyperdom'
 const taxonomy = require('../data/taxonomy.json')
+const taxonomyHierarchy = require('../data/taxonomy-hierarchy')
 
 taxonomy.forEach(entry => {
   entry.search = `${entry.sector.toLowerCase()} ${entry.theme.toLowerCase()} ${entry.class.toLowerCase()} ${entry.solution.toLowerCase()}`
@@ -10,27 +11,43 @@ function renderLoading () {
 
 export default class SolutionLookup {
   constructor() {
-    this.results = []
     this.isValid = false
     this.solutions = []
+    this.value = ''
+    this.results = []
+    this.navigation = {}
   }
 
   render() {
     return <div class="AddInitiativeSolution-lookup">
       <div>
-        <input type="text" binding="this.value" placeholder="Search solutions e.g. Solar" />
-        <button onclick={() => this.toggleAll()}>&#x21b4;</button>
+        <input type="text" binding="this.value" placeholder="Search solutions e.g. Solar" oninput={() => this.search()} />
       </div>
       {this.renderResults()}
     </div>
   }
 
-  toggleAll() {
-    if (this.results.length === taxonomy.length) {
-      this.results = []
-    } else {
-      this.results = taxonomy.slice(0)
+  navigate({sector, theme, solutionClass} = {}) {
+    if (sector) {
+      this.navigation = {sector}
+      return
     }
+    if (theme) {
+      this.navigation = {
+        sector: this.navigation.sector,
+        theme,
+      }
+      return
+    }
+    if (solutionClass) {
+      this.navigation = {
+        sector: this.navigation.sector,
+        theme: this.navigation.theme,
+        solutionClass,
+      }
+      return
+    }
+    this.navigation = {}
   }
 
   renderResults() {
@@ -47,6 +64,85 @@ export default class SolutionLookup {
         </li>
       })}</ul>
     }
+    if (this.navigation) {
+      return <div class="AddInitiativeSolution-groupResults">
+          {this.renderBreadcrumb()}
+        <div class="AddInitiativeSolution-groupContainer">
+            {this.renderSectors()}
+            {this.renderThemes()}
+            {this.renderClasses()}
+            {this.renderSolutions()}
+        </div>
+      </div>
+    }
+  }
+
+  renderBreadcrumb() {
+    const self = this
+    function renderSector() {
+      if (self.navigation.sector) {
+        return <span onclick={() => self.navigate({sector: self.navigation.sector})}> > {self.navigation.sector.name}</span>
+      }
+    }
+    function renderTheme() {
+      if (self.navigation.theme) {
+        return <span onclick={() => self.navigate({theme: self.navigation.theme})}> > {self.navigation.theme.name}</span>
+      }
+    }
+    function renderSolutionClass() {
+      if (self.navigation.solutionClass) {
+        return <span onclick={() => self.navigate({solutionClass: self.navigation.solutionClass})}> > {self.navigation.solutionClass.name}</span>
+      }
+    }
+    return <div class="AddInitiativeSolution-breadcrumb">
+      <span onclick={() => this.navigate()}>All</span>
+      {renderSector()}
+      {renderTheme()}
+      {renderSolutionClass()}
+    </div>
+  }
+
+  renderSectors() {
+    return <ul class={{'AddInitiativeSolution-group': true, 'AddInitiativeSolution-groupSelected': this.navigation.sector}}>
+        {taxonomyHierarchy.map(sector => {
+          return <li onclick={() => this.navigate({sector})}>{sector.name}</li>
+        })}
+    </ul>
+  }
+
+  renderThemes() {
+    if (this.navigation.sector) {
+      return <ul class={{'AddInitiativeSolution-group': true, 'AddInitiativeSolution-groupSelected': this.navigation.theme}}>
+          {this.navigation.sector.themes.map(theme => {
+            return <li onclick={() => this.navigate({theme})}>{theme.name}</li>
+          })}
+          </ul>
+    }
+  }
+
+  renderClasses() {
+    if (this.navigation.theme) {
+      return <ul class={{'AddInitiativeSolution-group': true, 'AddInitiativeSolution-groupSelected': this.navigation.solutionClass}}>
+          {this.navigation.theme.classes.map(solutionClass => {
+            return <li onclick={() => this.navigate({solutionClass})}>{solutionClass.name}</li>
+          })}
+          </ul>
+    }
+  }
+
+  renderSolutions() {
+    if (this.navigation.solutionClass) {
+      return <ul class="AddInitiativeSolution-group">
+          {this.navigation.solutionClass.solutions.map(solution => {
+            return <li onclick={() => this.addSolution({
+              sector: this.navigation.sector.name,
+              theme: this.navigation.theme.name,
+              class: this.navigation.solutionClass.name,
+              solution: solution.name,
+            })}>{solution.name}</li>
+          })}
+          </ul>
+    }
   }
 
   addSolution (solution) {
@@ -62,22 +158,11 @@ export default class SolutionLookup {
       const results = taxonomy.filter(entry => {
         return entry.search.includes(value)
       })
-      console.log('search', results, taxonomy, this.value)
       this.results = results
     } else {
       this.results = []
     }
     this.inProgress = false
-    this.refresh()
-  }
-
-  onadd(element) {
-    element
-      .querySelector('input[type=text]')
-      .addEventListener('input', () => {
-        this.inProgress = true
-        this.search()
-      })
   }
 }
 
