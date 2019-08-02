@@ -143,9 +143,10 @@ class App {
     if (this.solution.solutions.length === 0) {
       return <div>Please select a solution</div>
     } else {
-    return this.solution.solutions.map(solution => {
-      return <div>{solution.sector} > {solution.theme} > {solution.class} > {solution.solution}</div>
-    })
+      return <ul class="AddInitiativeSolution-solutions">{this.solution.solutions.map(solution => {
+        return <li>{solution.sector} > {solution.theme} > {solution.class} > {solution.solution}</li>
+      })}
+    </ul>
     }
   }
 }

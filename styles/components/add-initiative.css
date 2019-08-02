@@ -84,8 +84,15 @@
   flex: 10 0 auto;
   min-width: 100%;
 }
-.AddInitiativeSolution-group li {
+.AddInitiativeSolution-group li,
+.AddInitiativeSolution-solutions li {
   padding: 3px;
+}
+
+.AddInitiativeSolution-solutions,
+.AddInitiativeSolution-group {
+  border: 1px solid;
+  background-color: white;
 }
 .AddInitiativeSolution-groupSelected {
   display: none;
@@ -94,6 +101,7 @@
 .AddInitiative ul {
   padding: 0px;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .AddInitiative li {
