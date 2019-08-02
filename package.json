@@ -23,6 +23,7 @@
     "csv-parser": "^2.3.0",
     "fs-extra": "^8.1.0",
     "gh-pages": "^2.0.1",
+    "httpism": "^3.23.0",
     "hyperdom": "^2.0.0",
     "leaflet": "^1.5.1",
     "leaflet-gesture-handling": "^1.1.8",

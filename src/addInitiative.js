@@ -1,6 +1,8 @@
 import hyperdom from 'hyperdom'
 import SolutionLookup from './solutionLookup'
 import locationPicker from './locationPicker'
+import debounce from './debounce'
+import http from 'httpism'
 
 class App {
   constructor () {
@@ -10,7 +12,7 @@ class App {
     this.solution = new SolutionLookup()
   }
   onadd () {
-    locationPicker('location', this.initiative.location)
+    this.locationPicker = locationPicker('location', this.initiative.location)
   }
   escapeRegExp(str) {
     return str.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
@@ -66,7 +68,11 @@ class App {
         <span class="AddInitiative-text">Name:</span> <input type="text" binding="this.initiative.location.name" placeholder="Pleasentville Town Centre" />
       </label>
       <label class="AddInitiative-formItem">
-        <span class="AddInitiative-text">Address:</span> <input type="text" binding="this.initiative.location.address" placeholder="23a High St, Pleasentville, PL3 5VL" />
+        <span class="AddInitiative-text">Address:</span> <input type="text" binding="this.initiative.location.address" placeholder="23a High St, Pleasentville" />
+      </label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Postcode:</span> <input type="text" binding="this.initiative.location.postcode" placeholder="PT2 3HS" oninput={() => this.lookupPostcodeCoordinates()} />
+        {this.renderInvalidPostcodeMessage()}
       </label>
       <label class="AddInitiative-formItem">
         <p>Drag the marker to the location of the initiative</p>
@@ -77,6 +83,26 @@ class App {
         <button>Add Initiative</button>
       </label>
     </div>
+  }
+
+  renderInvalidPostcodeMessage() {
+    if (this.invalidPostcode) {
+      return <span class="AddInitiative-inputError">The supplied postcode is invalid - please enter a valid postcode</span>
+    }
+  }
+
+  async lookupPostcodeCoordinates() {
+    if (!this.locationPicker.isDefaultLocation()) {
+      return
+    }
+    debounce(async () => {
+      const {status, result} = await http.get(`https://api.postcodes.io/postcodes/${this.initiative.location.postcode}`, {exceptions: false})
+      this.invalidPostcode = status !== 200
+      this.refresh()
+      if (status === 200) {
+        this.locationPicker.markerAt([result.latitude, result.longitude])
+      }
+    }, 1000)()
   }
 
   renderSolutions() {

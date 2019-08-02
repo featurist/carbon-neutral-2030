@@ -5,6 +5,7 @@ let locationMap
 
 export default function (id, location) {
   const isMobile = mobileCheck()
+  let isDefaultLocation = true
   if (!isMobile) {
     L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
   }
@@ -28,5 +29,16 @@ export default function (id, location) {
   marker.on('dragend', e => {
     location.latlng = marker._latlng
     locationMap.panTo(marker._latlng)
+    isDefaultLocation = false
   })
+
+  return {
+    isDefaultLocation() {
+      return isDefaultLocation
+    },
+    markerAt(latlng) {
+      marker.setLatLng(latlng)
+      locationMap.panTo(marker._latlng)
+    }
+  }
 }
