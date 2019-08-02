@@ -19,15 +19,23 @@ class App {
   }
   render () {
     return <div class="AddInitiative-form">
+      <h2 class="AddInitiative-formHeading">Initiative</h2>
       
       <label class="AddInitiative-formItem">
         <span class="AddInitiative-text">Name:</span>
         <input class="AddInitiative-input" type="text" binding="this.initiative.name" placeholder="Food for life" />
       </label>      
       <label class="AddInitiative-formItem">
-        <span class="AddInitiative-text">Description:</span>
+        <span class="AddInitiative-text">Summary:</span>
         <textarea class="AddInitiative-textarea" binding="this.initiative.summary" placeholder="Provides food for those in need in the Pleasentville area"></textarea>
       </label>
+      <label>Initiative Image</label>
+
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Anticipated Carbon Saving:</span>
+        <input class="AddInitiative-input" type="text" binding="this.initiative.anticipatedCarbonSaving" placeholder="200kgCO2e" />
+      </label>
+
       <label class="AddInitiative-formItem">
         <span class="AddInitiative-text">Website:</span>
         <input class="AddInitiative-input" type="text" binding="this.initiative.website" placeholder="https://foodforlife.example" />
@@ -41,17 +49,29 @@ class App {
         <input class="AddInitiative-input" type="text" binding="this.initiative.email" placeholder="john@foodforlife.example" />
       </label>
       <label class="AddInitiative-formItem">
-        <span class="AddInitiative-text">Group:</span>
-        <input class="AddInitiative-input" type="text" binding="this.initiative.group" placeholder="Transition Pleasentville" />
+        <span class="AddInitiative-text">Telephone:</span>
+        <input class="AddInitiative-input" type="text" binding="this.initiative.telephone" placeholder="075 555 555 55" />
+      </label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Lead Group:</span>
+        <input class="AddInitiative-input" type="text" binding="this.initiative.leadGroup" placeholder="Transition Pleasentville" />
       </label>
       <label class="AddInitiative-formItem">
         <span class="AddInitiative-text">Status:</span>
-        <select class="AddInitiative-input" binding="this.initiative.status"><option>Planning</option><option>In Progress</option><option>Complete</option><option>Ongoing</option></select>
+        <select class="AddInitiative-input" binding="this.initiative.status">
+          <option>Initiation</option>
+          <option>Planning</option>
+          <option>Implementation</option>
+          <option>Operational</option>
+          <option>Completed</option>
+          <option>Abandoned</option>
+        </select>
       </label>
-      <div class="AddInitiative-formItem">
-      </div>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Related Initiative(s):</span>
+        <input class="AddInitiative-input" type="text" binding="this.initiative.relatedInitiatives" placeholder="Pleasentville Energy Trust, Hopeville Solar" />
+      </label>
 
-      
       <h2 class="AddInitiative-formHeading">Solutions</h2>
       
       <label class="AddInitiative-formItem">
@@ -62,12 +82,11 @@ class App {
         <span class="AddInitiative-text">Add Solution:</span>
           {this.solution}
       </div>
+
       <h2 class="AddInitiative-formHeading">Location</h2>
+
       <label class="AddInitiative-formItem">
-        <span class="AddInitiative-text">Name:</span> <input type="text" binding="this.initiative.location.name" placeholder="Pleasentville Town Centre" />
-      </label>
-      <label class="AddInitiative-formItem">
-        <span class="AddInitiative-text">Address:</span> <input type="text" binding="this.initiative.location.address" placeholder="23a High St, Pleasentville" />
+        <span class="AddInitiative-text">Locality:</span> <input type="text" binding="this.initiative.location.locality" placeholder="Pleasentville Town Centre" />
       </label>
       <label class="AddInitiative-formItem">
         <span class="AddInitiative-text">Postcode:</span> <input type="text" binding="this.initiative.location.postcode" placeholder="PT2 3HS" oninput={() => this.lookupPostcodeCoordinates()} />
@@ -78,6 +97,19 @@ class App {
         <div class="AddInitiative-location" id="location">
         </div>
       </label>
+
+      <h2 class="AddInitiative-formHeading">Partner Group</h2>
+
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Partner Group(s):</span>
+        <input class="AddInitiative-input" type="text" binding="this.initiative.partnerGroups" placeholder="Transition Pleasentville" />
+      </label>
+      <label class="AddInitiative-formItem">
+        <span class="AddInitiative-text">Partner Group(s) Role:</span>
+        <input class="AddInitiative-input" type="text" binding="this.initiative.partnerGroupsRole" placeholder="GCEC are providing fulfilment of the project while XYZ Schools Trust have underwritten the financial case" />
+      </label>
+      <div class="AddInitiative-formItem">
+      </div>
       <label class="AddInitiative-formItem AddInitiative-fullWidth">
         <button>Add Initiative</button>
       </label>
