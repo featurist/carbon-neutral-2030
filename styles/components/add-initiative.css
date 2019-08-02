@@ -91,6 +91,15 @@
 .AddInitiativeSolution-solutions li {
   padding: 3px;
 }
+.AddInitiativeSolution-solutionSelector li {
+  cursor: default !important;
+}
+
+.AddInitiativeSolution-addSolution,
+.AddInitiativeSolution-removeSolution,
+.AddInitiativeSolution-group li {
+  cursor: pointer;
+}
 
 .AddInitiativeSolution-solutions,
 .AddInitiativeSolution-group {
@@ -109,7 +118,6 @@
 
 .AddInitiative li {
   list-style-type: none;
-  cursor: pointer;
 }
 
 .AddInitiative li:nth-child(odd) {

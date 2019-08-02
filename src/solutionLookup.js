@@ -134,14 +134,14 @@ export default class SolutionLookup {
 
   renderSolutions() {
     if (this.navigation.solutionClass) {
-      return <ul class="AddInitiativeSolution-group">
+      return <ul class="AddInitiativeSolution-group AddInitiativeSolution-solutionSelector">
           {this.navigation.solutionClass.solutions.map(solution => {
-            return <li onclick={() => this.addSolution({
+            return <li>{solution.name} <span class="AddInitiativeSolution-addSolution" onclick={() => this.addSolution({
               sector: this.navigation.sector.name,
               theme: this.navigation.theme.name,
               class: this.navigation.solutionClass.name,
               solution: solution.name,
-            })}>{solution.name} [ add ]</li>
+            })}>[ add ]</span></li>
           })}
           </ul>
     }
