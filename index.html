@@ -1,88 +1,96 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Threads Again</title>
+    <title>Carbon Neutral 2030</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="dist/browser.css">
+    <script src="dist/index.js" type="text/javascript">
+    </script>
   </head>
   <body>
-    <section class="Header">
-      <div class="Header-container">
-        <h1 class="Header-logo">Threads Again</h1>
-        <div class="Header-info">
-          <h2 class="Header-tagline">Kids clothing<br /> delivered monthly</h2>
-          <h3 class="Header-call"><a href="#subscribe">Subscribe now</a> and get<br />15% off your first order</h3>
-        </diV>
+    <section class="Navigation">
+      <div class="Navigation-logo">
+        <h1><span class="title-carbon">Carbon</span> <span class="title-neutral">Neutral</span> <spann class="title-2030">2030</span></h1>
+        <h2 class="title-sub">Connecting people with initiatives</h2>
       </div>
+      <nav class="Navigation-menu">
+        <a href="#contact">Contact</a>
+      </nav>
     </section>
 
-    <section class="Subscribe">
-      <div class="Subscribe-container">
-        <h1 class="Subscribe-headline">Subscribe and Save</h1>
-        <div class="Subscribe-subline">
-          <p>We supply you with the best quality pre-worn clothes that your kids will adore.</p>
-          <p>Subscribe now and save time and money dressing the ones you love.</p>
-        </diV>
-        <h2 class="Subscribe-headline">How it works</h2>
-        <div class="Subscribe-subline">
-          <p>Tell us your clothing preferences, example: girl 9, no dresses or pink.</p>
-          <p>Each month we will send you 6 items of clothing that match your criteria and are appropriate for the current or coming season</p>
-          <p>If something arrives that you don't want return it for credit off your next months subscription.</p>
-        </diV>
-        <h2 class="Subscribe-headline">Price</h2>
-        <div class="Subscribe-subline">
-          <p>£12 per month per child + £3 delivery</p>
-          <p>Cancel any time</p>
-        </diV>
-
-        <a name="subscribe"></a>
-        <h2 class="Subscribe-headline">Let's get started</h2>
-        <form class="Subscribe-form" action='https://forms.zohopublic.com/virtualoffice15702/form/ThreadsAgainSubscribe/formperma/oCUhIVZ0d5uEDI5p4sZOJmVcJqkeXgh4spyUMdu9EK4/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
-          <input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
-          <input type="hidden" name="zf_redirect_url" value="http://something.localhost:3000/thank-you"><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
-          <input type="hidden" name="zc_gad" value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
-          <label class="Subscribe-formItem">
-            <span class="Subscribe-text">Your Email Address</span>
-            <input class="Subscribe-input" type="text" maxlength="255" name="Email" value="" placeholder="test@example.com" />
-          </label>
-          <label class="Subscribe-formItem">
-            <span class="Subscribe-text">Child Ages</span>
-            <input class="Subscribe-input" type="text" name="SingleLine" value="" maxlength="255" placeholder="eg. 12months, 3yrs, 6yr" />
-          </label>
-          <button class="Subscribe-button" type="submit">Next</button>
-        </form>
-        <!--<img class="Subscribe-image" src="images/subscribe.jpg" />-->
-        </diV>
-    </section>
-
-    <!--<section class="Special">-->
-      <!--<div class="Special-container">-->
-        <!--<img class="Special-image" src="images/something-special.jpg" />-->
-        <!--<h1 class="Special-headline">Something Special</h1>-->
-        <!--<p class="Special-subline">Looking for something a bit more specific for your child? No problem! Before your next order tell us what you are looking for and we'll be do our best to include it for you.</p>-->
-      <!--</div>-->
-    <!--</section>-->
-
-    <section class="Grow">
-      <div class="Grow-container">
-        <div class="Grow-group">
-          <span class="Grow-text">Let's grow together</span>
-          <a class="Grow-button" href="#subscribe">Subscribe</a>
+    <section class="Welcome">
+      <h1 class="Welcome-headline">Welcome</h1>
+      <div class="Welcome-items">
+        <div class="Welcome-introduction">
+          <p>Some kind remarks</p>
+          <div class="Welcome-image">
+            <img src="images/intro.jpg">
+          </div>
+        </div>
+        <div class="Welcome-actions">
+          <a class="Welcome-find" href="#explore">Find an initiative</a>
+          <a class="Welcome-add" href="#add">Add your initiative</a>
         </div>
       </div>
     </section>
 
-    <section class="About">
-      <div class="About-container">
-        <div class="About-text">
-          <h1 class="About-headline">About us</h1>
-          <p>Threads Again is a family business based in Stroud, Gloucestershire.</p>
-          <p>We are committed to reducing the environmental impact of childrens clothing by creating a circular economy that benefits both parents and planet.</p>
-          <p>Get in touch with us anytime <a href="mailto:chat@threadsagain.com">chat@threadsagain.com</a>
-        </div>
-        <img class="About-image" src="images/about.jpg" />
+    <section class="Explore">
+      <a name="explore"></a>
+      <h1>Explore</h1>
+      <nav class="Explore-navigation">
+        <a onclick="exploreMap.showAll()">All</a>
+        <a onclick="exploreMap.filter('sector', 'Food')">Food</a>
+        <a onclick="exploreMap.filter('sector', 'Energy')">Energy</a>
+        <a onclick="exploreMap.filter('sector', 'Transport')">Transport</a>
+        <a onclick="exploreMap.filter('sector', 'Waste')">Waste</a>
+        <a onclick="exploreMap.filter('sector', 'Building')">Building</a>
+        <a onclick="exploreMap.filter('sector', 'Knowledge')">Knowledge</a>
+        <a onclick="exploreMap.filter('sector', 'Nature')">Nature</a>
+        <a onclick="exploreMap.filter('sector', 'Materials')">Materials</a>
+      </nav>
+      <div class="Explore-map" id="explore">
       </div>
+    </section>
+
+    <section class="Mission">
+      <div class="Mission-image">
+        <img src="images/mission.jpg">
+      </div>
+      <div class="Mission-statement">
+        <h1>Mission Statement</h1>
+        <ul>
+          <li>Purpose</li>
+          <li>What you can get out of it</li>
+          <li>Why you should join [Call to action]</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="AddInitiative">
+      <a name="add"></a>
+      <h1>Add Initiative</h1>
+      <div id="add-initiative"></div>
+    </section>
+
+    <section class="contact">
+      <a name="contact"></a>
+      <h1>Contact</h1>
+
+      <p>Phone <a href="tel:01453 555 555">01453 555 555</a></p>
+      <p>Email <a href="mailto:contact@carbonnetural2030.org">contact@carbonneutral2030.org</a></p>
+    </section>
+
+    <section class="sponsors">
+      <h1>Sponsors</h1>
+      <div class="sponsors-logos">
+        <a class="sponsors-logo" href="https://featurist.co.uk" target="_blank"><img src="logos/featurist.svg" /></a>
+        <a class="sponsors-logo" href="https://stroud.gov.uk" target="_blank"><img src="logos/sdc.svg" /></a>
+      </div>
+    </section>
+
+    <section class="footer">
+      Copyright © 2019 Carbon Neutral 2030 – Privacy Policy – Legal
     </section>
   </body>
 </html>
